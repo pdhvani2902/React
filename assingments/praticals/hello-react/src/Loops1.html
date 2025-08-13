@@ -1,0 +1,80 @@
+// Write a JavaScript program using a for loop to print numbers from 1 to 10. Create a JavaScript program that uses a
+while loop to sum all even numbers
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Print numbers from 1 to 10 using a for loop
+        for (let i = 1; i <= 10; i++) {
+            console.log(i);
+        }
+
+    </script>
+</body>
+
+</html>
+
+//between 1 and 20.
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let number = 1;
+        let sum = 0;
+
+        while (number <= 100) {
+            if (number % 2 === 0) {
+                sum += number;
+            }
+            number++;
+        }
+
+        console.log("Sum of even numbers from 1 to 100 is:", sum);
+
+    </script>
+</body>
+
+</html>
+
+
+//Write a do-while loop that continues to ask the user for input until they enter a number greater than 10.
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let userInput;
+
+        do {
+            userInput = parseFloat(prompt("Enter a number greater than 10:"));
+        } 
+        while (isNaN(userInput) || userInput <= 10);
+
+        alert("Thank you! You entered: " + userInput);
+
+    </script>
+</body>
+
+</html>
