@@ -5,27 +5,42 @@ import Counter from "./Counter";
 import UserList1 from "./UserList";
 import { useSelector, useDispatch } from "react-redux";
 import { increment, decrement } from "./store";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Home from "./Home.jsx";
+import About from "./About";
+import Contact from "./Contact";
 
+const App = () => {
+  // Navigation styles
+  const navStyle = {
+    padding: "10px",
+    backgroundColor: "#f0f0f0",
+    marginBottom: "20px"
+  };
 
-function App() {
-  const count = useSelector((state) => state);
-  const dispatch = useDispatch();
+  const linkStyle = {
+    marginRight: "15px",
+    textDecoration: "none",
+    color: "blue"
+  };
+
   return (
-    <div>npm install @reduxjs/toolkit react-redux
+    <Router>
+      {/* Navigation Bar */}
+      <nav style={navStyle}>
+        <Link to="/" style={linkStyle}>Home</Link>
+        <Link to="/about" style={linkStyle}>About</Link>
+        <Link to="/contact" style={linkStyle}>Contact</Link>
+      </nav>
 
-      <h1>Welcome to React</h1>
-      {/*<FruitList /> */}
-     {/* <UserList /> */}
-      {/*<Counter />   */}
-      {/*<UserList1 /> */}
-      <Counter />
-      <div style={{ textAlign: "center", marginTop: "50px" }}>
-      <h1>Count: {count}</h1>
-      <button onClick={() => dispatch(increment())}>+</button>
-      <button onClick={() => dispatch(decrement())}>-</button>
-    </div>
-    </div>
+      {/* Route Definitions */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
