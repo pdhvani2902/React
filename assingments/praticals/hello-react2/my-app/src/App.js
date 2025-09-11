@@ -9,6 +9,9 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from "./Home.jsx";
 import About from "./About";
 import Contact from "./Contact";
+import Greeting from './Greeting'; 
+import Wlecomemessage from "./WelcomeMessage.jsx";
+import UserCard from "./UserCard.jsx";
 
 const App = () => {
   // Navigation styles
@@ -25,21 +28,17 @@ const App = () => {
   };
 
   return (
-    <Router>
-      {/* Navigation Bar */}
-      <nav style={navStyle}>
-        <Link to="/" style={linkStyle}>Home</Link>
-        <Link to="/about" style={linkStyle}>About</Link>
-        <Link to="/contact" style={linkStyle}>Contact</Link>
-      </nav>
+    
+    <div>
+      {/*<Greeting name="Dhvani" />
+      <Greeting name="Rutvik" />*/}
+     {/* <Wlecomemessage /> */}
+      {/*UserCard name="Dhvani Patel" age={25} location="India" />
+      <UserCard name="Rutvik Patel" age={25} location="Canada" /> I*/}
+     {*/<Counter /> */}
+     
 
-      {/* Route Definitions */}
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-    </Router>
+    </div>
   );
 };
 
